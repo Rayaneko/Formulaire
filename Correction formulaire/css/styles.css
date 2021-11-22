@@ -1,0 +1,278 @@
+/* Feuille de style Formulaire de réservation SNCF */
+/* Exercice Ifocop DIW */
+/* Fabien Cazayous - 2021 */
+
+/* Importation des polices */
+/* Police de caractères ROBOTO pour les textes */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+/* Utilisation : font-family: 'Roboto', sans-serif; */
+/* Police de caractères POPPINS pour les titres */
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@300&family=Poppins:ital,wght@0,100;1,100&display=swap');
+/* Utilisation : font-family: 'Poppins', sans-serif; */
+
+/*****************************************************/
+/* Variables pour les couleurs 
+/* Utilisation : 
+/* background-color: var(--fondGris); 
+/* color: var(--texteRouge); 
+/*****************************************************/
+:root{
+	--texteRouge: #CA285E;
+	--texteBleu: #2F4DE1;
+	--fondGris: #f1f1f1;
+}
+
+/************************************************************/
+/*                     Reset du body                       */
+/* J'utilise toute la largeur de la fenêtre du navigateur */
+/* Marges extérieures eet intérieures à 0 par défaut     */
+/* BOX-SIZING réglé sur la bordure des éléments         */
+/*******************************************************/
+body{
+	width: 100%;
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+/******************************************************/
+/*           Mise en forme du Formulaire             */
+/*   Il fait 60% du BODY - MARGIN auto le centre    */
+/* BORDER-RIGHT permet d'obtenir le trait vertical */
+/*             sur la droite du formulaire        */
+/*************************************************/
+form{
+	width: 60%;
+	margin: auto;
+    /* margin AUTO idem à : MARGIN top 0 right auto bottom 0 left auto */
+	border-right: 1px solid black;
+    height: auto;
+    /* Pendant la mise au point */
+    background-color: aliceblue;
+}
+
+/**********************************************/
+/* Propriétés communes à toutes les sections  */
+/**********************************************/
+section{
+    border-bottom: 1px solid black;
+    margin: 0;
+}
+/* Communes à ces 4 Sections */
+#infosReservation, #infosConfort, 
+#profilPassager, #infosFinales{
+    margin: 0 20px 0 20px;
+}
+
+/* Proprités provisoires pendant la mise eu point du code CSS */
+#infosReservation, #infosConfort, 
+#profilPassager, #infosFinales{
+    background-color: beige;
+}
+
+/**********************************************************/
+/* Mise en forme et positionnement de la Première Section */
+/*         Display flex et Flex Direction Column         */
+/* Afin de répartir 2 Blocs DIV verticalement automatiquement */
+/************************************************************/
+#enteteReservation{
+    width: 100%;
+    /* Mode affichege des éléments dans la Section */
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Mise en forme et positionnement des 2 Blocs DIV Conteneurs */
+#enteteReservation div{
+    margin: 4px 8px 4px 8px;
+    /* Affichage des éléments à l'intérieur de ces blocs DIV */
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Positionnement des Icones */
+#enteteReservation div i{
+    margin: 14px 2px 4px 2px;
+    padding: 0 10px 0 10px;
+    color: var(--texteRouge);
+}
+
+/* Mise en forme de l'élément P du premier Bloc DIV */
+#enteteReservation div p{
+    font-family: 'Roboto', sans-serif;
+    font-size: 1em;
+    font-weight: bolder;
+}
+
+/* Mise en forme du H1 du deuxième Bloc DIV */
+#enteteReservation div h1{
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.4em;
+    font-weight: bold;
+    margin: 16px 0 0 10px;
+}
+
+#enteteReservation div img{
+    height: 50px;
+    margin: 8px 8px 8px 0;
+}
+/***************************************************************/
+/* Fin Mise en forme et positionnement de la Première Section */
+/*************************************************************/
+
+/**********************************************************/
+/* Mise en forme et positionnement de la Seconde Section */
+/*             La section InfosReservation              */
+/************************************************************/
+#infosReservation{
+    height: auto;
+}
+
+/**********************************************************/
+/*   Mise en forme et positionnement du Bloc Handicap     */
+/************************************************************/
+#blocHandicap{
+    padding: 10px 10px 10px 10px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#blocHandicap span{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
+}
+
+#blocHandicap span a{
+    text-decoration: none;
+    color: var(--texteRouge);
+}
+/********************************************************************/
+/*   Fin de la Mise en forme et positionnement du Bloc Handicap     */
+/********************************************************************/
+
+/**********************************************************/
+/*             La Partie Champs Obligatoires              */
+/************************************************************/
+#blocRequired{
+    margin: 10px 0 10px 10px;
+	background-color: var(--fondGris);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+#blocRequired span{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
+}
+#blocRequired div{
+    margin: 10px 0 10px 0;
+}
+#blocRequired div label, #blocRequired div input{
+    font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
+
+}
+/**********************************************************/
+/*       Fin de la Partie Champs Obligatoires              */
+/************************************************************/
+
+/**********************************************************/
+/*       Début de la Partie Gares Départ / Arrivée         */
+/************************************************************/
+#departArrivee{
+    margin: 4px 0 10px 0;
+	height: auto;
+    padding: 0.2vh 0 0 10px;
+	display: flex;
+	grid-column-gap: 20px;
+}
+
+#departArrivee div input{
+	width: 26vw;
+	margin: 4px 0 10px 0;
+	height: 3vh;
+}
+
+#departArrivee div label{
+	display: block;
+	margin: 0 0 0 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
+}
+/**********************************************************/
+/*       Fin de la Partie Gares Départ / Arrivée         */
+/************************************************************/
+
+/**********************************************************/
+/*       Début de la Partie Date Départ / Date Retour      */
+/************************************************************/
+#dateAllerRetour{
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#dateAller, #dateRetour{
+    margin: 0 0 0 10px;
+	width: 82%;
+	display: flex;
+	justify-content: space-between;
+}
+
+#dateAller div input,
+#dateRetour div input{
+	width: 10vw;
+	margin: 4px 0 10px 0;
+	height: 3vh;
+}
+
+#dateAller div label
+#dateRetour div label{
+	margin: 0 0 0 4px;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1em;
+	font-weight: bolder;
+}
+
+#horaireAller{
+	width: 60%;
+	padding: 6px 0 0 8px;
+	display: flex;
+	justify-items: space-around;
+}
+
+#chxHeureAller, #lstHeureAller{
+	width: 80px;
+	height: 28px;
+	margin: 16px 0 0 12px;
+}
+/**********************************************************/
+/*       Fin de la Partie Date Départ / Date Retour        */
+/************************************************************/
+
+/* Classe à appliquer aux éléments ayant un fond gris */
+.fondGris{
+    background-color: var(--fondGris);
+}
+
+
+
+@media screen and (max-width: 920px){
+    #departArrivee{
+        margin: 4px 0 10px 20px;
+        height: auto;
+        padding: 0.2vh 0 0 10px;
+        display: flex;
+        flex-direction: column;
+    }
+    #departArrivee div input{
+        width: 40vw;
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" href="css/styleSncf.css">
+		<script src="https://kit.fontawesome.com/03955a31db.js" 
+        crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Formulaire SNCF</title>
+	</head>
+<body>
+	<!-- début form -->
+	<form action="#" method="post">	
+		<section id="enteteReservation">
+            <div>
+                <div>
+                    <p>Voyageurs / Infos & billets / Réservations</p>
+                </div>
+                <div>
+                    <i class="fas fa-print"></i>
+                    <i class="fas fa-share-alt"></i>
+                </div>
+            </div>
+            <div>
+                <h1>Réservation</h1>
+                <img src="img/logo-sncf.jpg" alt="Le logo de Voyages SNCF">
+            </div>
+        </section> <!-- Fin Section enteteReservation -->
+        <section id="infosReservation">
+            <!-- Partie HANDICAP -->
+            <div id="blocHandicap">
+				<span><i class="fa fa-wheelchair"></i>Voyageur handicapé, 
+            rendez-vous sur votre <a href="#">espace dédié</a></span>
+				<span><a href="#">GERER MES RESERVATIONS</a></span>
+			</div> <!-- Fin Bloc Handicap -->
+            <!-- Partie Champs Obligatoires -->
+            <div id="blocRequired">
+				<span>*Champs Obligatoires</span>
+				<div> <!-- Bloc Aller Retour Différents -->
+					<input id="allerRetour" type="checkbox" name="allerRetour">
+					<label for="allerRetour">Aller et retour différents</label>
+				</div> <!-- Fin Bloc Aller Retour Différents -->
+			</div> <!-- Fin Partie Champs Obligatoires -->
+            <!-- Partie Gares de Départ Gares d'Arrivée -->
+            <div id="departArrivee"> 
+				<div>
+					<label for="gareDepart">Départ *</label>
+					<input type="text" name="gareDepart" id="gareDepart" required>
+				</div>
+				<div>
+					<label for="gareArrivee">Arrivée *</label>
+					<input type="text" name="gareArrivee" id="gareArrivee" required>
+				</div>
+			</div> <!-- Fin Bloc gares Départ/Arrivée -->
+            <!-- Début du Bloc date Départ et date Retour -->
+			<section id="dateAllerRetour"> 
+				<!-- id=al devient dateAller-->
+				<div id="dateAller"> <!-- Début du Bloc date Aller -->
+					<div id="jourAller">
+						<label for="allerLe">Aller le</label>
+						<input type="date" name="allerLe" id="allerLe" required>
+					</div> 
+					<div id="horaireAller">
+						<select name="heureDepart" id="chxHeureAller">
+							<option value="">Départ à</option>
+						</select>
+						<select name="heureDepart" id="lstHeureAller">
+							<option value="">00H00</option>
+							<option value="">02H00</option>
+							<option value="">04h00</option>
+							<option value="">06h00</option>
+							<option value="">08h00</option>
+							<option value="">10h00</option>
+							<option value="">12h00</option>
+							<option value="">14h00</option>
+							<option value="">16h00</option>
+							<option value="">18h00</option>
+							<option value="">20h00</option>
+							<option value="">22h00</option>
+						</select>
+					</div>
+				</div> <!-- Fin du Bloc Date Aller -->
+				<div id="dateRetour"> <!-- Début du Bloc date Retour -->
+					<div id="jourRetour">
+						<label for="retourLe">Retour le </label>
+						<input type="date" name="retourLe" id="retourLe" required>
+					</div>  
+					<div id="horaireRetour">
+						<select name="heureRetour" id="chxHeureRetour">
+							<option value="">Départ à</option>
+						</select>
+						<select name="heureRetour" id="lstHeureRetour">
+							<option value="">00H00</option>
+							<option value="">02H00</option>
+							<option value="">04h00</option>
+							<option value="">06h00</option>
+							<option value="">08h00</option>
+							<option value="">10h00</option>
+							<option value="">12h00</option>
+							<option value="">14h00</option>
+							<option value="">16h00</option>
+							<option value="">18h00</option>
+							<option value="">20h00</option>
+							<option value="">22h00</option>
+						</select>
+					</div> <!-- Fin du Bloc Horaire Retour -->
+				</div> <!-- Fin du Bloc date Retour -->
+
+        </section> <!-- Fin Section infosReservation -->
+        <section id="infosConfort">
+            <p>Section Confort</p>
+        </section><!-- Fin Section infosConfort -->
+        <section id="profilPassager">
+            <p>Profil Passager</p>
+        </section><!-- Fin Section profilPassager -->
+        <section id="infosFinales">
+            <p>Infos Finales</p>
+        </section> <!-- Fin Section infosFinales -->
+	</form>
+</body>
+</html>
